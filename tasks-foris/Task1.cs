@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 
 namespace tasks_foris
 {
@@ -9,9 +7,9 @@ namespace tasks_foris
 	/// 1.	Ломай меня полностью.
 	/// Реализуйте метод FailProcess так, чтобы процесс завершался.Предложите побольше различных решений.
 	/// </summary>
-	class Task1
+	public class Task1
 	{
-		static void Run()
+		public static void Run()
 		{
 			try
 			{
@@ -30,10 +28,13 @@ namespace tasks_foris
 		{
 			// Два метода, которые завершают текущий процесс:
 			// Environment.Exit(0);
-			Process.GetCurrentProcess().Kill();
+			// Process.GetCurrentProcess().Kill();
 
-			// Либо как-нибудь сломать программу
-			FailProcess();
+			// Если нужно завершить определенный процесс (например, word.exe)
+			foreach (Process process in Process.GetProcessesByName("word"))
+			{
+				process.Kill();
+			}
 		}
 	}
 }

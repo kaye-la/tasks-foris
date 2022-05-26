@@ -6,7 +6,11 @@ namespace tasks_foris
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Task1.Run();
+            // Task2.Run();
+            // Task3.Run();
+             Task4.Run();
+            // Task5.Run();
         }
     }
 }
